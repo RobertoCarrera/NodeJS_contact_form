@@ -5,7 +5,7 @@ const router = express.Router();
 
 router.post('/send-email', (req, res) => {
 
-    const {name, email, message} = req.body;
+    const {nombre, telefono, email, mensaje} = req.body;
     const contentHtml = require('./contentHtml'); 
     
     const CLIENT_ID = process.env.CLIENT_ID;

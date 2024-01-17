@@ -50,6 +50,7 @@ module.exports = `
                 </h1>
                 <section>
                     <h4>Nombre: ${nombre}</h4>
+                    <h4>Teléfono: ${telefono}</h4>
                     <h4>Correo: ${email}</h4>
                     <p>${mensaje}</p>
                 </section>
