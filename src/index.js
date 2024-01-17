@@ -7,18 +7,15 @@ require('dotenv').config();
 const allowedIp = process.env.ALLOWED_IP;
 
 const corsOptions = {
-
     origin: function (origin, callback) {
-        
-        if (origin && origin.includes(allowedIp)) {
-            
-            callback(null, true);
-        } else {
-        
-            callback(new Error('Not allowed by CORS'));
-        }
+      if (!origin || origin.includes(allowedIp)) {
+        callback(null, true);
+      } else {
+        callback(new Error('Not allowed by CORS'));
+      }
     }
-};
+  };
+  
 
 app.use(cors(corsOptions));
 app.use(express.urlencoded({extended: false}));
