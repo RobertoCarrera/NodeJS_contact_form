@@ -7,9 +7,10 @@ require('dotenv').config();
 const allowedIp = process.env.ALLOWED_IP;
 
 const corsOptions = {
+
     origin: function (origin, callback) {
         
-        if (origin.includes(allowedIp)) {
+        if (origin && origin.includes(allowedIp)) {
             
             callback(null, true);
         } else {
