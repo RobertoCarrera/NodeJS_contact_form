@@ -1,6 +1,6 @@
 const express = require('express'); 
 const nodemailer = require('nodemailer');
-const {google} = require('googleapis');
+const { google } = require('googleapis');
 const router = express.Router();
 
 router.post('/send-email', (req, res) => {
