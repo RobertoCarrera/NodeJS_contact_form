@@ -1,4 +1,6 @@
-module.exports = `
+module.exports = function contentHtml(nombre, telefono, email, mensaje){
+    
+    return `
     <!DOCTYPE html>
         <head>
             <meta charset="UTF-8" />
@@ -58,3 +60,4 @@ module.exports = `
             </div>
         </body>
     </html>`;
+}
