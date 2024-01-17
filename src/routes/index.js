@@ -54,12 +54,16 @@ router.post('/send-email', (req, res) => {
         }catch(err){
 
             console.log(err);
+            res.status(500).send('Hubo un error al enviar el correo');
         }
     }
 
     sendMail()
         .then(result => res.status(200).send('Mensaje enviado'))
-        .catch((error) => console.log(error.message));
+        .catch((error) => {
+            console.log(error.message);
+            res.status(500).send('Hubo un error al realizar la llamada al servidor');
+        });
 });
 
 module.exports = router;
