@@ -6,7 +6,7 @@ require('dotenv').config();
 
 const corsOptions = {
 
-    origin: 'http://15.229.5.75:3500',
+    origin: 'https://staging.d299uordpqdywy.amplifyapp.com/',
     credentials: true,
 };
 
@@ -14,7 +14,7 @@ app.use(cors(corsOptions));
 
 
 app.use(function(req, res, next) {
-    res.header("Access-Control-Allow-Origin", "http://15.229.5.75:3500");
+    res.header("Access-Control-Allow-Origin", "https://staging.d299uordpqdywy.amplifyapp.com/");
     res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
     res.header('Access-Control-Allow-Methods', 'GET, POST, OPTIONS, PUT, PATCH, DELETE');
     next();
